@@ -2,6 +2,7 @@
 @import "https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css";
 
 body{
+    font-family: Roboto, sans-serif;
     font-size: 16px;
     margin: 0;
 }
@@ -26,4 +27,189 @@ body{
 }
 .bg-blue{
     background-color: #004a80;
+}
+
+/* Header Search Section*/
+
+.container-search {
+    padding-top: 1em;
+    padding-bottom: 4em;
+    background-color: #004a80;
+    color: #fff;
+}
+
+.container-search h1 {
+    font-size: 2em;
+    font-weight: 700;
+    text-align: center;
+    margin: 0
+}
+
+.container-search .search-message {
+    margin-top: .5em;
+    text-align: center;
+    font-size: 1.2em
+}
+
+.container-search .search-message strong {
+    color: #f6bc25
+}
+
+.container-search .search-box {
+    display: block;
+    margin-top: 1em;
+}
+
+.container-search .search-box .form-group {
+    flex: 1;
+    display: block;
+    position: relative;
+    padding: 0;
+    margin-bottom: .5em;
+}
+
+
+
+.container-search .search-box .form-group #invalidEmail {
+    color: #dc0015;
+    display:none;
+}
+
+.container-search .search-box .form-group input {
+    display: block;
+    box-sizing: border-box;
+    width: 100%;
+    border-radius: 3px;
+    border-width: 2px;
+    height: 3em;
+    font-size: 1.5em
+}
+
+.container-search .search-box .btn-search {
+    margin-left: 0;
+    width: 100%
+}
+
+.container-search .search-sub-message .fa {
+    margin-right: .5em
+}
+
+.container-search .search-sub-message {
+    font-size: 1em;
+    margin-top: 1.5em;
+    color: #f6bc25;
+    font-weight: 700
+}
+
+
+ /*Search button styles*/
+ .btn-search {
+    font-size: 1.5rem;
+    color: #004a80;
+    font-weight: 700;
+    border-radius: .25em;
+    border: 1px solid #f6bc25;
+    padding: .75em 3em;
+    box-shadow: inset 0 1px 0 0 #fff;
+    cursor: pointer;
+    background-image: linear-gradient(90deg, #f6bc25, #f2da56);
+}
+
+.btn-search:hover {
+    background-image: linear-gradient(90deg, #f2da56, #f2da56);
+}
+
+.btn-search:focus {
+    background-image: linear-gradient(90deg, #f6bc25, #f6bc25);
+}
+
+
+@media only screen and (min-width:768px) {
+    .container-search {
+        padding-top: 2em;
+        padding-bottom: 4em;
+        background-color: #004a80;
+        color: #fff
+    }
+    .container-search h1 {
+        font-size: 3em;
+        font-weight: 700;
+        text-align: center;
+        margin: 0
+    }
+    .container-search .search-message {
+        margin-top: .5em;
+        text-align: center;
+        font-size: 1.25em
+    }
+    .container-search .search-message strong {
+        color: #f6bc25
+    }
+    .container-search .search-box {
+        display: flex;
+        align-items: stretch;
+        margin-top: 1em
+    }
+    .container-search .search-box .form-group {
+        flex: 1;
+        display: flex;
+        align-items: stretch;
+        position: relative;
+        padding: 0;
+        margin: 0
+    }
+
+    
+    .container-search .search-box .btn-search {
+        margin-left: 1em;
+        padding: .75em 2.5em;
+        width: auto;
+        
+    }  
+}
+
+@media only screen and (min-width:1024px) {
+    .container-search {
+        padding-top: 2em;
+        padding-bottom: 4em
+    }
+    .container-search h1 {
+        font-size: 3.25em
+    }
+    .container-search .search-message {
+        margin-top: .5em;
+        text-align: center;
+        font-size: 1.5em
+    }
+    .container-search .search-message strong {
+        color: #f6bc25
+    }
+    .container-search .search-box {
+        display: flex;
+        align-items: stretch;
+        margin-top: 1em
+    }
+    .container-search .search-box .form-group {
+        flex: 1;
+        display: flex;
+        align-items: stretch;
+        position: relative;
+        padding: 0
+    }
+    
+    .container-search .search-box .form-group input {
+        width: 100%
+    }
+    .container-search .search-box .btn-search {
+        margin-left: 1em
+    }
+    .container-search .search-sub-message {
+        font-size: 1em;
+        margin-top: 1.5em;
+        color: #f6bc25;
+        font-weight: 700
+    }
+    .container-search .search-sub-message .fa {
+        margin-right: .5em
+    }
 }
