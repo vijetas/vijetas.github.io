@@ -1,0 +1,110 @@
+
+.main-body {
+    background-image: linear-gradient(0deg, #e6e6e6, #fff);
+    font-size: 1.5em;
+}
+
+.main-body h2 {
+    text-align: center;
+    color: #004a80;
+    font-weight: 700;
+    font-size: 2.4em;
+}
+
+.main-body h3 {
+    color: #004a80;
+    font-weight: 700;
+    font-size: 1em;
+}
+.main-list {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.main-list .list-item {
+    flex: 0 0 50%;
+    display: flex;
+}
+
+.main-list .list-item .list-number {
+    flex: 0 0 50px;
+    margin:auto;
+}
+
+.main-list .list-item .list-number .value {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #004a80;
+    color:#F6BC25;
+    font-weight: bold;
+    border-radius: 50%;
+    height: 60px;
+    width: 60px;
+    
+}
+
+.main-list .list-item .list-content {
+    flex: 1;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top:10px;
+}
+
+.main-list .list-item .list-content .list-content-header {
+    margin-top: 0;
+    margin-bottom: 0.5em;
+}
+
+.main-list .list-item .list-content .list-content-text {
+    margin-top: 0;
+    font-size: 0.8em;
+}
+
+@media only screen and (min-width: 768px) {
+    .list-content {
+        flex: 0 0 50%;
+    }
+    
+    .list-number {
+        font-size: 1.6em;
+    }
+    .list-number .value {
+        height: 2em;
+        width: 2em;
+    }
+    .list-item .list-content .list-content-header {
+        font-size: 1em;
+        margin-bottom: 0.25em;
+    }
+    .list-column{
+        width:50%;
+    }
+    .main-list .list-item .list-number .value{
+        height: 60px;
+        width: 60px;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    .list-content {
+        flex: 0 0 50%;
+    }
+    
+    
+    .list-number .value {
+        height: 2em;
+        width: 2em;
+    }
+    .list-item .list-content .list-content-header {
+        font-size: 1em;
+    }
+    .list-column{
+        width:50%;
+    }
+
+    .main-list .list-item .list-number .value{
+        height: 90px;
+        width: 90px;
+    }
+}
