@@ -1,0 +1,32 @@
+.navbar {
+    display: flex;
+    align-items: center
+}
+
+.navbar .navbar-brand {
+    padding: 1em
+}
+
+.navbar .navbar-brand img {
+    width: 175px
+}
+
+.navbar .navbar-nav {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0
+}
+
+.navbar .navbar-nav.navbar-nav-right {
+    margin-left: auto
+}
+
+.navbar .navbar-nav li {
+    padding: 1em 0.5em
+}
+
+.navbar .navbar-nav .fa {
+    color: #f6bc25;
+    font-size: 1.25em
+}
