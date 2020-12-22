@@ -5,6 +5,7 @@ body{
     font-family: Roboto, sans-serif;
     font-size: 16px;
     margin: 0;
+    background-color: #F8F8F8;
 }
 .container {
     max-width: 100%;    
@@ -64,15 +65,30 @@ body{
     flex: 1;
     display: block;
     position: relative;
-    padding: 0;
-    margin-bottom: .5em;
+    padding: 0;    
 }
 
-
-
-.container-search .search-box .form-group #invalidEmail {
-    color: #dc0015;
-    display:none;
+#txtEmail .invalid-container{
+    display: none;
+}
+#txtEmail.invalid .invalid-container{
+    display: block;
+}
+#txtEmail{
+    margin-bottom: .5em;
+}
+#txtEmail.invalid{
+    margin-bottom: 1.5em;
+}
+#txtEmail.invalid input{
+    border: 2px solid red;
+    border-bottom-left-radius: 0;
+}
+.invalid-email-msg{
+    background-color: red;
+    color: #fff;
+    position: absolute;
+    padding: 0 10px;
 }
 
 .container-search .search-box .form-group input {
@@ -87,7 +103,7 @@ body{
 
 .container-search .search-box .btn-search {
     margin-left: 0;
-    width: 100%
+    width: 100%;    
 }
 
 .container-search .search-sub-message .fa {
@@ -125,6 +141,12 @@ body{
 
 
 @media only screen and (min-width:768px) {
+    #txtEmail{
+        margin-bottom: 0;
+    }
+    #txtEmail.invalid{
+        margin-bottom: 0;
+    }
     .container-search {
         padding-top: 2em;
         padding-bottom: 4em;
@@ -149,15 +171,7 @@ body{
         display: flex;
         align-items: stretch;
         margin-top: 1em
-    }
-    .container-search .search-box .form-group {
-        flex: 1;
-        display: flex;
-        align-items: stretch;
-        position: relative;
-        padding: 0;
-        margin: 0
-    }
+    }   
 
     
     .container-search .search-box .btn-search {
@@ -189,13 +203,6 @@ body{
         align-items: stretch;
         margin-top: 1em
     }
-    .container-search .search-box .form-group {
-        flex: 1;
-        display: flex;
-        align-items: stretch;
-        position: relative;
-        padding: 0
-    }
     
     .container-search .search-box .form-group input {
         width: 100%
@@ -212,4 +219,27 @@ body{
     .container-search .search-sub-message .fa {
         margin-right: .5em
     }
+}
+/* Loading Section*/
+.loading_container{
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        color: #004a80;
+    }
+.loading_body{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+    
+.loading-image {
+    width:150px;
+}
+.loading-caption{
+margin-top: 20px;
+font-weight: bold;
+font-size: 1.4em;
 }
