@@ -9,7 +9,7 @@
     txtEmail = document.getElementById("txtEmail"),
     container = document.getElementById("container"),
     email = document.getElementById("emailId"),
-    loading_container = document.getElementById("loading_container"),
+    loadingContainer = document.getElementById("loading_container"),
     contentSection = document.getElementById("contentSection");;
 
     //Page Load function
@@ -43,14 +43,14 @@
     /* Function to show loading gif*/
     /* Param - No Params*/
     var ShowLoading = function(){
-        loading_container.style.display = "flex";
+        loadingContainer.style.display = "flex";
         body.classList.add("loading_body");
     }
 
     /* Function to hide loading gif */
     /* Param - No Params*/
     var HideLoading = function(){
-        loading_container.style.display = "none";
+        loadingContainer.style.display = "none";
         body.classList.remove("loading_body");
     }
 

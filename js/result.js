@@ -6,32 +6,33 @@
 
     //regularly accessed elements
     var body = document.getElementsByTagName("body")[0],
-    loading_container = document.getElementById("loading_container");
+    loadingContainer = document.getElementById("loading_container"),
+    txtEmail = document.getElementById("txtEmail"),
+    resultContainer = document.getElementById("results-container"),
+    resultSearch = document.getElementById("result-search");
 
 
     $(document).ready(function () {
         
-
-        PopulateData();
+        PopulateData();         //Fetch data from localStorage and display
 
         //Search button click event
         document.getElementById("searchBtn").addEventListener("click", function () {
 
-             //Check email format
-            if (Common.ValidateEmail(document.getElementById("emailId").value)) {
-                //Loading Sign
+            txtEmail.classList.remove("invalid");           //Invalid email message is hidden
+
+            var emailId = document.getElementById("emailId").value;
+            if (Common.ValidateEmail(emailId)) {            //Check email format
                 $("#results-container").hide();
                 $("#noResultsFound").hide();
                 $("#result-search").hide();
-                
-                ShowLoading();                          //Show the loading gif
 
-                //var urlAdd = "https://cors-anywhere.herokuapp.com/https://ltv-data-api.herokuapp.com/api/v1/records.json?email=" + emailId;//"doesmith@example.com"
-                var urlAdd = "https://ltv-data-api.herokuapp.com/api/v1/records.json?email=" + emailId;//"doesmith@example.com"
+                ShowLoading();                              //Show the loading gif
+                //Web API call to fetch the data
+                var urlAdd = "https://cors-anywhere.herokuapp.com/https://ltv-data-api.herokuapp.com/api/v1/records.json?email=" + emailId;//"doesmith@example.com"
                 Common.WebAPICall(urlAdd, successSearch, failSearch);
             }else{
-               //Show invalid email message
-               $("#txtEmail").addClass("invalid");
+               txtEmail.classList.add("invalid");           //Invalid email message is shown
             }
         });
 
@@ -42,10 +43,11 @@
     /* Param - email address to be checked */
     var PopulateData = function() {
         
-        var resHeader, resMsg, data = JSON.parse(window.localStorage["data"]);
+        var resHeader, resMsg, data = window.localStorage["data"];
 
         //Check that window.localStorage is not empty
         if (data) {
+            data =  JSON.parse(window.localStorage["data"]);
             resHeader = "1 Result";
             resMsg = "Look at the result below to see the details of the person you’re searched for.";
             document.getElementById("result-header").innerText = resHeader;
@@ -91,17 +93,18 @@
         }
     }
 
+    
     /* Function to show loading gif*/
     /* Param - No Params*/
     var ShowLoading = function(){
-        loading_container.style.display = "flex";
+        loadingContainer.style.display = "flex";
         body.classList.add("loading_body");
     }
 
     /* Function to hide loading gif */
     /* Param - No Params*/
     var HideLoading = function(){
-        loading_container.style.display = "none";
+        loadingContainer.style.display = "none";
         body.classList.remove("loading_body");
     }
 
