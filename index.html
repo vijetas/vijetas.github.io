@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/header.css" />
     <link rel="stylesheet" href="css/content.css" />
+    <link rel="stylesheet" href="css/footer.css" />
+    <script src="js/common.js"></script>
 </head>
 
 <body>
@@ -39,9 +41,10 @@
             </div>
   
             <div class="search-box">
-              <div class="form-group">
+              <div id="txtEmail" class="form-group">
                 <input type="email" id="emailId" name="email" required placeholder="EMAIL"/>
-                <span id="invalidEmail"></span>
+                <div class="invalid-container"><span class="invalid-email-msg">Please add a valid email address</span></div>
+                
               </div>
               <button id="searchBtn" class="btn-search" type="submit">  GO!  </button>
           </div>
@@ -139,14 +142,25 @@
             </div>
         </div>
     </section>
-    <section id="loading_container" style="display:none;">
-        <figure><img class="loading-container" src="assets/loading_spinner.gif" />
-        <figcaption class="loading-caption">Please wait a moment...</figcaption>
-    </figure>
+    <section id="loading_container" class="loading_container" style="display:none;">
+        <img class="loading-image" src="assets/loading_spinner.gif" />
+        <span class="loading-caption">Please wait a moment...</span>
     </section>
-
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-message">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                </div>
+                <ul class="footer-links">
+                    <li><a href="#">Terms</a></li>
+                    <li><a href="#">Privacy</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <!--<script src="js/main.js"></script>-->
+    <script src="js/main.js"></script>
 </body>
 
 </html>

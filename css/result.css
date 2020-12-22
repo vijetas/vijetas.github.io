@@ -76,10 +76,11 @@ body .flex-1 {
 .results-container .results-box .result-item .result-content .result-details .result-detail-item ul {
     padding-left: 0;
     list-style: none;
+    margin-top: 0.5em;
     font-size: 1em
 }
 
-.results-container .results-box .result-item .result-content .result-details .result-detail-item ul a {
+.results-container .results-box .result-item .result-content .result-details .result-detail-item ul#phoneNumbers {
     text-decoration: none;
     color: #004a80
 }
@@ -148,7 +149,7 @@ body .flex-1 {
         flex: 0 0 45%
     }
     .results-container .results-box .result-item .result-content .result-details .result-detail-item:nth-child(odd) {
-        flex: 0 0 50%;
+        flex: 0 0 48%;
         padding-right: 2em
     }
     .results-container .results-box .result-item .result-content .result-details .result-detail-item .result-item-header {
