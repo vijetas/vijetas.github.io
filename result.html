@@ -1,0 +1,137 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Result for email address details" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Result Page</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/header.css" />
+    <link rel="stylesheet" href="css/result.css" />
+    <link rel="stylesheet" href="css/footer.css" />
+</head>
+
+<body>
+    <header class="bg-blue">
+        <div class="container">
+            <nav class="navbar">
+                <a class="navbar-brand" href="./index.html"><img src="assets/logo.png" alt="logo" /></a>
+                <ul class="navbar-nav navbar-nav-right">
+                    <li>
+                        <a href="#"><i class="fa fa-search"></i></a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-user"></i></a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <section class="flex-1">
+        <div id="results-container" class="results-container">
+            <div class="container">
+                <div class="results-header">
+                    <h1 id="result-header">Result</h1>
+                    <p id = "ResultsMsg"></p>
+                </div>
+                <div class="results-box">
+                    <div>
+                        <div class="result-item">
+                            <div class="result-icon">
+                                <div class="value"><i class="fa fa-user"></i></div>
+                            </div>
+                            <div class="result-content">
+                                <h2 class="result-header" id="name"></h2>
+                                <p class="result-text" id="description">
+                                    
+                                </p>
+                                <div class="result-details">
+                                    <div class="result-detail-item">
+                                        <div class="result-item-header">Address</div>
+                                        <p id="address">
+                                            
+                                        </p>
+                                    </div>
+                                    <div class="result-detail-item">
+                                        <div class="result-item-header">Phone Numbers</div>
+                                        <ul id="phoneNumbers">
+                                        
+                                        </ul>
+                                    </div>
+                                    <div class="result-detail-item">
+                                        <div class="result-item-header">Email</div>
+                                        <p id="email"></p>
+                                    </div>
+                                    <div class="result-detail-item">
+                                        <div class="result-item-header">Relatives</div>
+                                        <ul id="relatives">
+                                            
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!---->
+                  <!--  <div id="resultError">
+                        <h3>There was an error in processing your request. Please try again later.</h3>
+                    </div>               -->     
+                </div>
+            </div>
+        </div>
+        <div id="noResultsFound" class="results-container">
+            <div class="container results-header">
+           <h1 id="noResultsHeader"></h1>
+                    <p id="noResultsMsg"></p>
+                </div>
+        </div>
+    </section>
+    <section>
+        <div id="result-search" class="result-search">
+            <div class="container">
+                <h1>Cant Find The Right Person?</h1>
+                <div class="search-message">
+                    <strong>Try Again</strong> - Make a new search
+                </div>
+
+                <div class="search-box">
+                    <div id="txtEmail" class="form-group">
+                      <input type="email" id="emailId" name="email" required placeholder="EMAIL"/>
+                      <div class="invalid-container"><span class="invalid-email-msg">Please add a valid email address</span></div>
+                      
+                    </div>
+                    <button id="searchBtn" class="btn-search" type="submit">  GO!  </button>
+                </div>
+
+                <div class="banner-sub-message">
+                    <i class="fa fa-lock"></i> Enter Any Email Address. They won't be notified.
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="loading_container" class="loading_container" style="display:none;">
+        <img class="loading-image" src="assets/loading_spinner.gif" />
+        <span class="loading-caption">Please wait a moment...</span>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-message">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                </div>
+                <ul class="footer-links">
+                    <li><a href="#">Terms</a></li>
+                    <li><a href="#">Privacy</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <!--script src="js/result.js"></script>-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="js/result.js"></script>
+
+</body>
+
+</html>
