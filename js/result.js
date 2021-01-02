@@ -39,8 +39,8 @@
     });
 
 
-    /* Function to validate email*/
-    /* Param - email address to be checked */
+    /* Function to display searched data on screen*/
+    /* Param - No Params*/
     var PopulateData = function() {
         
         var resHeader, resMsg, data = window.localStorage["data"];
